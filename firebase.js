@@ -1,21 +1,21 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDm5G7DJIsJ9M8i-TciePB1wcOa-x6jLoo",
-  authDomain: "netowrking-research.firebaseapp.com",
-  projectId: "netowrking-research",
-  storageBucket: "netowrking-research.appspot.com",
-  messagingSenderId: "171257401099",
-  appId: "1:171257401099:web:1c9d4b98aedaf0714a9c0e",
-  measurementId: "G-LFTVWR9QZF"
+  apiKey: "AIzaSyAQSiTTOChxQZd8GgXk__aRFW2G-DFDg8E",
+  authDomain: "researchsync-4b73c.firebaseapp.com",
+  databaseURL:
+    "https://researchsync-4b73c-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "researchsync-4b73c",
+  storageBucket: "researchsync-4b73c.appspot.com",
+  messagingSenderId: "278971190167",
+  appId: "1:278971190167:web:e82fef3b344cd43de392d2",
+  measurementId: "G-ZSP6TLNMR2",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const storage = getStorage(app);
 
-export default app;
+export { db, storage };
